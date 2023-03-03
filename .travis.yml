@@ -1,0 +1,22 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t qweghj1245/chrispy -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true qweghj1245/chrispy yarn test --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "docker-chrispy"
+  env: "DockerChrispy-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-1-960996594499"
+  bucket_path: "docker-chrispy"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
