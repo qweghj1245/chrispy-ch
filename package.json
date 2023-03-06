@@ -1,7 +1,10 @@
 {
-  "name": "chrispy",
+  "name": "@qweghj1245/chrispy-ch",
   "version": "0.1.0",
   "private": true,
+  "publishConfig": {
+    "@qweghj1245:registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
