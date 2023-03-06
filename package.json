@@ -1,6 +1,6 @@
 {
   "name": "@qweghj1245/chrispy-ch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publishConfig": {
     "@qweghj1245:registry": "https://npm.pkg.github.com"
   },
