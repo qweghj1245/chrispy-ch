@@ -1,3 +1,3 @@
 module.exports = () => {
-  console.log('module import local publish');
+  console.log('module import local publish2');
 }
