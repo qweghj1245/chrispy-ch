@@ -1,3 +1,2 @@
-module.exports = () => {
-  console.log('module import123');
-}
+export { default as Head } from './components/Head';
+export { default as Footer } from './components/Footer';
