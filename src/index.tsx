@@ -1,3 +1,3 @@
 module.exports = () => {
-  console.log('module import');
+  console.log('module import123');
 }
