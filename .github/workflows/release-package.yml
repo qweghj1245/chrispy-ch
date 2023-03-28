@@ -1,9 +1,8 @@
 name: Node.js Package
 
 on:
-  push:
-    tags:
-      - "**"
+  release:
+    types: [published]
 
 jobs:
   publish-gpr:
@@ -20,7 +19,7 @@ jobs:
       - run: npm install
       - run: git config --global user.name "${{ github.actor }}"
       - run: git config --global user.email "github-action-${{ github.actor }}@users.noreply.github.com"
-      - run: npm version ${{ github.event.release.tag_name }}
+      - run: npm version ${{ github.event.release.name }}
       - run: npm run build
       - run: npm publish
         env:
